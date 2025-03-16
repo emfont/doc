@@ -1,0 +1,54 @@
+---
+title: API
+description: 其實也就只有一個
+---
+
+<Callout title="注意" type="warning">
+  一般情況下**你不應該使用 emfont API**。emfont 的 API 可能會在未來有更新，但固定不變的是你只需要引入這個幾十 KB 的 JavaScript，就會自動完成所有操作。但如果你知道你在做什麼，如想要在應用程式中使用，這裡是 emfont 在做的事。
+</Callout>
+
+## 獲得字體檔連結
+
+**POST** `https://font.emtech.cc/g/:font:`
+
+範例：
+
+```sh
+curl -v -X POST https://font.emtech.cc/g/jf-openhuninn-2.0 \
+-H 'Content-Type: application/json' \
+-d '{
+    "words": "神乎其技，原其事理。",
+    "weight": 400,
+    "min": true,
+    "format": "woff2"
+}'
+```
+
+* `word`: 要顯示的文字 （必填）
+* `weight`: 字體粗細（預設 `400`）
+* `min`: 是否要極致壓縮（預設 `false`，不建議於內文使用）
+* `format`: 字體檔案格式（預設 `woff2`）
+
+回覆：
+
+```json
+{
+    "status": "success",
+    "location": [
+        "https://cdn.font.emtech.cc/fonts/LD7FS.woff2",
+        "https://cdn.font.emtech.cc/fonts/8CO4S.woff2"
+    ]
+}
+```
+
+`location` 內的連結為所有需要載入的字體檔案。可使用 CSS 或 JavaScript 載入，這裡以 CSS 為例。
+
+```CSS
+@font-face {
+    font-family: '朱雀仿宋';
+    src: url('https://cdn.font.emtech.cc/fonts/1CD4S.woff2') format('woff2');
+}
+.emfont-ZhuQueFangSong {
+    font-family: '朱雀仿宋', sans-serif;
+}
+```
