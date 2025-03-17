@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'emfont 官方文檔',
+  title: 'emfont 官方文件',
 };
 
 export default function HomePage() {
@@ -22,7 +22,7 @@ export default function HomePage() {
           marginBottom: '1rem',
         }}
       >
-        emfont 官方文檔
+        emfont 官方文件
       </h1>
       <p>
        你可以到{' '}
@@ -35,7 +35,7 @@ export default function HomePage() {
         >
           /docs
         </Link>{' '}
-        查看文檔。
+        查看文件。
       </p>
     </main>
   );
