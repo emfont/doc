@@ -1,19 +1,32 @@
 ---
 title: 快速入門
 description: 入門快速
+icon: Play
 ---
 
-首先，請在你的網頁中載 emfont：
+import { Step, Steps } from "fumadocs-ui/components/steps";
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+import { Callout } from "fumadocs-ui/components/callout";
 
-```html
-<script src="https://font.emtech.cc/emfont.min.js"></script>
-```
+<Steps>
+	<Step>
+    ### 載入 emfont
+    首先，請在你的網頁中載 emfont：
 
-要放在 `<head>`、`<body>`、~~`<footer>`~~ 都行。幾 KB 而已，你開心就好。
+    ```html
+    <script src="https://font.emtech.cc/emfont.min.js"></script>
+    ```
 
-## 選擇字體
+    要放在 `<head>`、`<body>`、~~`<footer>`~~ 都行。幾 KB 而已，你開心就好。
 
-給要設定字體的 HTML 元素加上字體專屬的 class 即可。可包多層元素，與其他 class 混合使用。
+    <Callout type="info">
+        這個 script 是無阻塞的，所以不會阻礙頁面載入。
+    </Callout>
+    </Step>
+
+    <Step>
+        ### 選擇字體
+        給要設定字體的 HTML 元素加上字體專屬的 class 即可。可包多層元素，與其他 class 混合使用。
 
 比如說你想要在這段文字使用 jf-openhuninn-2.0 字體，可以這樣寫：
 
@@ -23,7 +36,7 @@ description: 入門快速
 </p>
 ```
 
-再比如說你想整個網頁預設使用某個字體，可以在 `<body>` 標籤上加上 class。
+再比如說你想整個網頁預設使用某個字體，可以在 `<body>` 標籤上加上 class：
 
 ```html
 <body class="emfont-975HazyGoSC">
@@ -38,15 +51,19 @@ description: 入門快速
     <p class="px-6 text-center emfont-jfopenhuninn">這個段落使用了 jf-openhuninn-2.0 字型。</p>
 </body>
 ```
+ </Step>
 
-## 啟動
+    <Step>
+        ### 啟動
 
-在 HTML 載入完之後找個地方啟動即可。
+        在 HTML 載入完之後找個地方啟動即可。
 
-```html
-<script>
+        ```html
+        <script>
     emfont.init()
 </script>
 ```
 
-就是這麼簡單。
+        就是這麼簡單。
+    </Step>
+</Steps>

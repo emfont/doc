@@ -1,13 +1,21 @@
 ---
 title: 常見問題
 description: 你有問題？
+icon: CircleHelp
 ---
 
 import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
 
 <Accordions>
 	<Accordion title="emfont 要錢嗎？">
-		不用。
+		不用。emfont 以 Apache 2.0 授權並完全開源於 GitHub，你可以的自由使用。
+	</Accordion>
+	<Accordion title="為甚麼我的字體沒辦法正常顯示？">
+		* 請確保 emfont 的 JavaScript 有正確載入。
+		* 確保你有使用 `emfont.init()` 初始化。
+		* 確保你沒有在 `emfont.init()` 之前有先設定好 `emfont-` 的 class。
+		* 如果是字母大小寫問題（如你使用 CSS 設定 `text-transform: uppercase;`），那麼你可以使用 `emfont.init({ caseSensitive: false })` 來初始化，或是創建一個隱形的 `span` 包住你要設定字體的元素，並且對那個 `span` 設定 `emfont-` 的 class。
+		* 如果以上都不是，請到 [Discord 伺服器](https://dc.elvismao.com) 告訴我們，讓我們來幫你看看。
 	</Accordion>
 	<Accordion title="這些字型是否需要付費？">
 		這些字型都是開源字型，不需要付費。
@@ -26,12 +34,6 @@ import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
 	</Accordion>
 	<Accordion title="如何推薦字體？">
 		歡迎到 [Discord 伺服器](https://dc.elvismao.com) 告訴我們。
-	</Accordion>
-	<Accordion title="為甚麼我的字體沒辦法正常顯示？">
-		* 請確保 emfont 的 JavaScript 有正確載入。
-		* 確保你有使用 `emfont.init()` 初始化。
-		* 確保你沒有在 `emfont.init()` 之前有先設定好 `emfont-` 的 class。
-		* 如果是字母大小寫問題（如你使用 CSS 設定 `text-transform: uppercase;`），那麼你可以使用 `emfont.init({ caseSensitive: false })` 來初始化，或是創建一個隱形的 `span` 包住你要設定字體的元素，並且對那個 `span` 設定 `emfont-` 的 class。
 	</Accordion>
 	<Accordion title="emfont 為什麼掛了？">
 		如果你發現 emfont 沒有回應、首頁沒有出現維護公告、或是有任何其他問題，歡迎到 [Discord 伺服器](https://dc.elvismao.com) 告訴我們，我們會盡快修復。

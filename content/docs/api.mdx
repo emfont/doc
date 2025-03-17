@@ -1,17 +1,21 @@
 ---
 title: API
 description: A piece of information.
+icon: Server
 ---
 
-<Callout title="注意" type="warning">
-  一般情況下**你不應該使用 emfont API**。emfont 的 API 可能會在未來有更新，但固定不變的是你只需要引入這個幾十 KB 的 JavaScript，就會自動完成所有操作。但如果你知道你在做什麼，如想要在應用程式中使用，這裡是 emfont 在做的事。
+import { Callout } from "fumadocs-ui/components/callout";
+
+    
+<Callout title="注意" type="info">
+  **一般情況下你不應該使用 emfont API。** emfont 的 API 可能會在未來有更新，但固定不變的是你只需要引入這個幾十 KB 的 JavaScript，就會自動完成所有操作。但如果你知道你在做什麼，如想要在應用程式中使用，這裡是 emfont 在做的事。
 </Callout>
 
 ## emfont 字體列表
 
-會列出所有 emfont 支援的字體，以及其字體名稱、ID、字體粗細、授權條款、以及版本。
-
 **GET** `https://font.emtech.cc/list/`
+
+會列出所有 emfont 支援的字體，以及其字體名稱、ID、字體粗細、授權條款、以及版本。
 
 回覆範例：
 
@@ -39,9 +43,7 @@ description: A piece of information.
 }
 ```
 
-## 獲得字體檔連結
-
-可使用 GET 或是 POST。
+## 查詢字體檔連結
 
 **POST** `https://font.emtech.cc/g/:font:`
 
@@ -86,3 +88,7 @@ curl -v -X POST https://font.emtech.cc/g/jf-openhuninn-2.0 \
     font-family: '朱雀仿宋', sans-serif;
 }
 ```
+
+## 純 CSS 載入字體
+
+請見 [純 CSS 載入字體](/docs/pure-css)。
