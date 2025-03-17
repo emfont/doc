@@ -1,13 +1,47 @@
 ---
 title: API
-description: 其實也就只有一個
+description: A piece of information.
 ---
 
 <Callout title="注意" type="warning">
   一般情況下**你不應該使用 emfont API**。emfont 的 API 可能會在未來有更新，但固定不變的是你只需要引入這個幾十 KB 的 JavaScript，就會自動完成所有操作。但如果你知道你在做什麼，如想要在應用程式中使用，這裡是 emfont 在做的事。
 </Callout>
 
+## emfont 字體列表
+
+會列出所有 emfont 支援的字體，以及其字體名稱、ID、字體粗細、授權條款、以及版本。
+
+**GET** `https://font.emtech.cc/list/`
+
+回覆範例：
+
+```json
+{
+ "975HazyGoSC":{
+        "name": { "zh": "975 朦胧黑体", "en": "975 Hazy Go SC" },
+        "style": "normal",
+        "weight": [200,300,400,500,600],
+        "id": "975HazyGoSC",
+        "version": "v2.01",
+        "license": "OFL-1.1",
+        "source": "https://github.com/lxgw/975HazyGo"
+    },
+    "CEFFontsCJK":{
+        "name": { "zh": "快去写作业CJK", "en": "CEF Fonts CJK" },
+        "style": "mono",
+        "weight": [400],
+        "id": "CEFFontsCJK",
+        "version": "v2.16",
+        "license": "OFL-1.1",
+        "source": "https://github.com/Partyb0ssishere/cef-fonts-cjk "
+    },
+    ...
+}
+```
+
 ## 獲得字體檔連結
+
+可使用 GET 或是 POST。
 
 **POST** `https://font.emtech.cc/g/:font:`
 

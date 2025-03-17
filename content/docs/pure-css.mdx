@@ -1,0 +1,35 @@
+---
+title: 純 CSS 載入字體
+description: 純 CSS 載入字體
+---
+
+你可以直接以 CSS 載入整個字體。很蠢，而且可能會耗費較多網路資源與時間。
+
+**GET** `https://font.emtech.cc/css/:font:`
+
+範例：
+
+```html
+<link href="https://font.emtech.cc/css/:font:" rel="stylesheet">
+```
+
+你可以透過參數自訂字體粗細以及包含的文字（詳見[極致壓縮](/docs/advanced#極致壓縮)）。
+
+```html
+<link href="https://font.emtech.cc/css/:font?weight=:weight&words=:words" rel="stylesheet">
+```
+
+範例：
+
+```html
+<link href="https://font.emtech.cc/css/jf-openhuninn-2.0?weight=400&words=神乎其技，原其事理。" rel="stylesheet">
+```
+
+當然，你也可以使用 `@font-face` 來載入字體。
+
+```css
+@font-face {
+    font-family: '朱雀仿宋';
+    src: url('https://font.emtech.cc/css/jf-openhuninn-2.0?weight=400&words=神乎其技，原其事理。') format('woff2');
+}
+```

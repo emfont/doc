@@ -1,4 +1,15 @@
 {
     "title": "文檔",
-    "pages": ["get-started", "guide","emoji" ,"api","faq"]
+    "pages": [
+      "---使用教學---",
+      "setup",
+      "advanced",
+      "pure-css",
+      "emoji",
+      "---開發者---",
+      "api",
+      "---常見問題---",
+      "faq"
+    ],
+    "root": true
   }

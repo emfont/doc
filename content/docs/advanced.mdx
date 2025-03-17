@@ -1,0 +1,60 @@
+---
+title: 進階設定
+description: 完整的設定列表
+---
+
+## HTML class
+
+### 極致壓縮
+
+emfont 可以為你的網站生成專屬的字體檔，不會多收錄一個字，因此檔案大小會極小。不過啟用極致壓縮第一次載入時會需要等伺服器幾百毫秒來完成生成，且如果網頁多收錄一個字就會需要重新生成，使用者也會需要重複下載字體。**因此建議只使用於網站大標題**。
+
+使用方式是在 HTML 的 class 當中加入一個 min
+
+```html
+<h1 class="emfont-jfopenhuninn-min">極致壓縮標題</h1>
+```
+
+### 字重設定
+
+emfont 預設會自己去看看你在 CSS 設定的字重，並尋找最接近的字體。如果你想要自己設定，或是讓 emfont 可以輕鬆一點的話你可以自己設置。
+
+```html
+<h1 class="emfont-jfopenhuninn-900">非常粗的標題！</h1>
+```
+
+## JavaScript
+
+### 初始化
+
+以下為所有可用的初始化選項，顯示的為預設值：
+
+```js
+emfont.init({
+    caseSensitive: false,
+    weightSensitive: false,
+    weight: 400,
+    format: 'woff2',
+    autoApply: true,
+    cache: true,
+    applyAt: 'body',
+});
+```
+
+* `caseSensitive`：是否檢查 CSS `text-transform` 設定來區分大小寫。
+* `weightSensitive`：是否檢查 CSS `font-weight` 設定來區分字重。
+* `weight`：預設字重。
+* `format`：字體格式。僅適用於極致壓縮，可使用 `woff2`、`woff`、`ttf`。
+* `autoApply`：是否自動套用字體。
+* `cache`：是否記錄載入過的文字，重複呼叫 `emfont.init()` 時不會重新載入。
+* `applyAt`：字體載入時 CSS 插入的位置。
+
+### callback
+
+emfont 提供 callback 讓你可以更靈活的控制字體的載入。
+
+```js
+emfont.init(() => {
+    console.log('所有字體載入完成!');
+});
+```
