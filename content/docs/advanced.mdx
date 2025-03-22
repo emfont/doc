@@ -38,24 +38,24 @@ emfont.init({
     format: 'woff2',
     autoApply: true,
     cache: true,
-    applyAt: 'body',
+    applyAt: document.head
 });
 ```
 
 * `caseSensitive`：是否檢查 CSS `text-transform` 設定來區分大小寫。
 * `weightSensitive`：是否檢查 CSS `font-weight` 設定來區分字重。
 * `weight`：預設字重。
-* `format`：字體格式。僅適用於極致壓縮，可使用 `woff2`、`woff`、`ttf`。
+* `format`：字體格式。部分字型可能僅適用於極致壓縮，可使用 `woff2`、`woff`、`ttf`。
 * `autoApply`：是否自動套用字體。
 * `cache`：是否記錄載入過的文字，重複呼叫 `emfont.init()` 時不會重新載入。
-* `applyAt`：字體載入時 CSS 插入的位置。
+* `applyAt`：字體載入時 CSS 插入的位置。如 `document.getElementById()`。
 
 ### callback
 
 emfont 提供 callback 讓你可以更靈活的控制字體的載入。
 
 ```js
-emfont.init(() => {
+emfont.init().then(() => {
     console.log('所有字體載入完成!');
 });
 ```
