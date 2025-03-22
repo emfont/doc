@@ -13,12 +13,12 @@ import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
 	<Accordion title="為甚麼我的字體沒辦法正常顯示？">
 		* 請確保 emfont 的 JavaScript 有正確載入。
 		* 確保你有使用 `emfont.init()` 初始化。
-		* 確保你沒有在 `emfont.init()` 之前有先設定好 `emfont-` 的 class。
-		* 如果是字母大小寫問題（如你使用 CSS 設定 `text-transform: uppercase;`），那麼你可以使用 `emfont.init({ caseSensitive: false })` 來初始化，或是創建一個隱形的 `span` 包住你要設定字體的元素，並且對那個 `span` 設定 `emfont-` 的 class。
+		* 確保你有在使用 `emfont.init()` 之前有先設定好 `emfont-` 的 class。
+		* 如果是字母大小寫問題（如你使用 CSS 設定 `text-transform: uppercase;`），那麼你可以使用 `emfont.init({ caseSensitive: true })` 來初始化，或是創建一個隱形的 `span` 包住你要設定字體的元素，並且對那個 `span` 設定 `emfont-` 的 class。
 		* 如果以上都不是，請到 [Discord 伺服器](https://dc.elvismao.com) 告訴我們，讓我們來幫你看看。
 	</Accordion>
 	<Accordion title="這些字型是否需要付費？">
-		這些字型都是開源字型，不需要付費。
+		這些字型都是免費開源字型，不需要付費。
 	</Accordion>
 	<Accordion title="我可以在商業產品中使用 emfont 嗎？">
 		可以。但請在使用前注意一下字體的授權條款。大多數的字體都是以 [SIL 開源字型授權 (OFL)](https://openfontlicense.org/) 授權，可以自由使用。
@@ -27,7 +27,7 @@ import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
 		可以。但一樣請注意一下字體的授權條款。
 	</Accordion>
 	<Accordion title="我可以用 CSS 或 JavaScript 來對字體做立體、陰影、旋轉等效果嗎？">
-		可以，我完全不在乎。唯一要注意的是 CSS 輪廓效果，因為[輪廓重疊](https://jsbin.com/xewuzew/edit?html,output)，這種效果與可變字型不相容。
+		可以，我完全不在乎。唯一要注意的是 CSS 輪廓效果，因為可能會[輪廓重疊](https://jsbin.com/xewuzew/edit?html,output)，這種效果與可變字型不相容。
 	</Accordion>
 	<Accordion title="如何將字型上傳至 emfont？">
 		歡迎到 [Discord 伺服器](https://dc.elvismao.com) 告訴我們。建議你可以上傳至 GitHub，這樣比較方便我們做維護更新。
