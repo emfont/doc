@@ -11,15 +11,8 @@ export const baseOptions: BaseLayoutProps = {
   nav: {
     title: (
       <>
-        {/* <svg
-          width="24"
-          height="24"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-label="Logo"
-        >
-          <circle cx={12} cy={12} r={12} fill="currentColor" />
-        </svg> */}
-        emfont 官方文件
+       <img src="/images/emfont-logo-light.svg" alt="emfont 官方文件" style={{ height: "1.5rem", marginLeft: ".5rem" }} />
+        {/* emfont 官方文件 */}
       </>
     ),
   },
