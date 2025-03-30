@@ -23,6 +23,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                     search={{
                         options: {
                             type: "static",
+                            api: "/docs/search"
                         },
                     }}
                 >
