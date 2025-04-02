@@ -6,7 +6,33 @@ icon: Settings
 
 ## HTML class
 
-### 極致壓縮
+給要設定字體的 HTML 元素加上字體專屬的 class 即可。可包多層元素，與其他 class 混合使用。
+
+比如說你想要在這段文字使用 jf-openhuninn-2.0 字體，可以這樣寫：
+
+```html
+<p class="emfont-jfopenhuninn">
+    這個段落使用了 jf-openhuninn-2.0 字型。
+</p>
+```
+
+再比如說你想整個網頁預設使用某個字體，可以在 `<body>` 標籤上加上 class：
+
+```html
+<body class="emfont-975HazyGoSC">
+</body>
+```
+
+想使用其他 class，或是使用多種字體？完全沒問題！
+
+```html
+<body class="emfont-975HazyGoSC">
+    <h1>這裡的文字使用 975 朦胧黑体</h1>
+    <p class="px-6 text-center emfont-jfopenhuninn">這個段落使用了 jf-openhuninn-2.0 字型。</p>
+</body>
+```
+
+## 極致壓縮
 
 emfont 可以為你的網站生成專屬的字體檔，不會多收錄一個字，因此檔案大小會極小。不過啟用極致壓縮第一次載入時會需要等伺服器幾百毫秒來完成生成，且如果網頁多收錄一個字就會需要重新生成，使用者也會需要重複下載字體。**因此建議只使用於網站大標題**。
 
@@ -16,7 +42,7 @@ emfont 可以為你的網站生成專屬的字體檔，不會多收錄一個字�
 <h1 class="emfont-jfopenhuninn-min">極致壓縮標題</h1>
 ```
 
-### 字重設定
+## 字重設定
 
 emfont 預設會自己去看看你在 CSS 設定的字重，並尋找最接近的字體。如果你想要自己設定，或是讓 emfont 可以輕鬆一點的話你可以自己設置。
 

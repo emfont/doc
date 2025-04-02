@@ -25,38 +25,22 @@ import { Callout } from "fumadocs-ui/components/callout";
     </Step>
 
     <Step>
-        ### 選擇字體
-        給要設定字體的 HTML 元素加上字體專屬的 class 即可。可包多層元素，與其他 class 混合使用。
 
-比如說你想要在這段文字使用 jf-openhuninn-2.0 字體，可以這樣寫：
+    ## 選擇字型
+
+       給要設定字體的 HTML 元素加上字體專屬的 class 即可。
 
 ```html
 <p class="emfont-jfopenhuninn">
     這個段落使用了 jf-openhuninn-2.0 字型。
 </p>
 ```
-
-再比如說你想整個網頁預設使用某個字體，可以在 `<body>` 標籤上加上 class：
-
-```html
-<body class="emfont-975HazyGoSC">
-</body>
-```
-
-想使用其他 class，或是使用多種字體？完全沒問題！
-
-```html
-<body class="emfont-975HazyGoSC">
-    <h1>這裡的文字使用 975 朦胧黑体</h1>
-    <p class="px-6 text-center emfont-jfopenhuninn">這個段落使用了 jf-openhuninn-2.0 字型。</p>
-</body>
-```
  </Step>
 
     <Step>
         ### 啟動
 
-        在 HTML 載入完之後找個地方啟動即可。
+        在 HTML 載入完之後 (如 `<body>` 的最後面) 啟動即可。
 
         ```html
         <script>
