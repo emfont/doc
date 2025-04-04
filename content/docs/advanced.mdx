@@ -59,7 +59,6 @@ emfont 預設會自己去看看你在 CSS 設定的字重，並尋找最接近�
 ```js
 emfont.init({
     caseSensitive: false,
-    weightSensitive: false,
     weight: 400,
     format: 'woff2',
     autoApply: true,
@@ -69,8 +68,7 @@ emfont.init({
 ```
 
 * `caseSensitive`：是否檢查 CSS `text-transform` 設定來區分大小寫。
-* `weightSensitive`：是否檢查 CSS `font-weight` 設定來區分字重。
-* `weight`：預設字重。
+* `weight`：預設字重。（實際使用字重為 class 設定 > CSS 設定 > 預設設定）
 * `format`：字體格式。部分字型可能僅適用於極致壓縮，可使用 `woff2`、`woff`、`ttf`。
 * `autoApply`：是否自動套用字體。
 * `cache`：是否記錄載入過的文字，重複呼叫 `emfont.init()` 時不會重新載入。
