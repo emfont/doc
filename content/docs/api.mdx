@@ -33,6 +33,7 @@ import { Callout } from "fumadocs-ui/components/callout";
 ```
 
 你可以添加參數來過濾字體：
+
 -   `name`: 字體名稱
 -   `lang`: 支援語言
 -   `category`: 字體類別
@@ -55,11 +56,14 @@ curl -v -X GET https://font.emtech.cc/list?name=GenJyuuGothicP
 
 ```json
 {
-    "name": "源柔ゴシック",
-    "zh": "思源柔黑體 P", "en": "Gen Jyuu Gothic P" },
+    "name": {
+        "original": "源柔ゴシック",
+        "zh": "思源柔黑體 P",
+        "en": "Gen Jyuu Gothic P"
+    },
     "category": "sans-serif",
-    "weight": [200,300,350,400,500,700,900],
-    "tag": ["圓體","調合字"],
+    "weight": [200, 300, 350, 400, 500, 700, 900],
+    "tag": ["圓體", "調合字"],
     "family": "Noto",
     "version": "v2.01",
     "license": "OFL-1.1",
