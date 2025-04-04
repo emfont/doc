@@ -63,7 +63,8 @@ emfont.init({
     format: 'woff2',
     autoApply: true,
     cache: true,
-    applyAt: document.head
+    applyAt: document.head,
+    hideMessage: false,
 });
 ```
 
@@ -73,6 +74,7 @@ emfont.init({
 * `autoApply`：是否自動套用字體。
 * `cache`：是否記錄載入過的文字，重複呼叫 `emfont.init()` 時不會重新載入。
 * `applyAt`：字體載入時 CSS 插入的位置。如 `document.getElementById()`。
+* `hideMessage`：是否隱藏 emfont 啟動時的提示訊息。
 
 ### callback
 
