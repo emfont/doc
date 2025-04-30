@@ -9,45 +9,36 @@ import { Tab, Tabs } from "fumadocs-ui/components/tabs";
 import { Callout } from "fumadocs-ui/components/callout";
 
 <Steps>
-	<Step>
-    ### 載入 emfont
-    首先，請在你的網頁中載 emfont：
-
-    ```html
-    <script src="https://font.emtech.cc/emfont.js"></script>
-    ```
-
-    要放在 `<head>`、`<body>`、~~`<footer>`~~ 都行。幾 KB 而已，你開心就好。
-
-    <Callout type="info">
-        這個 script 是無阻塞的，所以不會阻礙頁面載入。
-    </Callout>
-    </Step>
-
     <Step>
-
     ## 選擇字型
 
-       給要設定字體的 HTML 元素加上字體專屬的 class 即可。
-
-```html
-<p class="emfont-jfopenhuninn">
-    這個段落使用了 jf-openhuninn-2.0 字型。
-</p>
-```
- </Step>
-
+    ```html
+    <p class="emfont-jfopenhuninn">
+        這個段落使用了 justfont 的 open 粉圓字型。
+    </p>
+    ```
+    </Step>
     <Step>
-        ### 啟動
+    ## 載入並啟動 emfont
 
-        在 HTML 載入完之後 (如 `<body>` 的最後面) 啟動即可。
+    ```html
+    <script type="module">
+        import "https://font.emtech.cc/emfont.js";
+        emfont.init();
+    </script>
+    ```
+
+    要放在 `<head>`、`<body>`、~~`<footer>`~~ 都行。幾 KB 而已，你開心就好。但請記得先載入完 HTML 再執行這段 script，否則 emfont 找不到字。
+
+    <Callout type="info">
+        如果你不喜歡使用 module，也可以使用傳統的 script 標籤載入 emfont.js。
 
         ```html
+        <script src="https://font.emtech.cc/emfont.js"></script>
         <script>
-    emfont.init()
-</script>
-```
-
-        就是這麼簡單。
+            emfont.init();
+        </script>
+        ```
+    </Callout>
     </Step>
 </Steps>

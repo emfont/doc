@@ -58,23 +58,31 @@ emfont 預設會自己去看看你在 CSS 設定的字重，並尋找最接近�
 
 ```js
 emfont.init({
-    caseSensitive: false,
-    weight: 400,
-    format: 'woff2',
+    caseSensitive: false, // 目前都是 false
+    weight: null,
+    format: "woff2",
     autoApply: true,
     cache: true,
     applyAt: document.head,
-    hideMessage: false,
+    colorTest: false,
+    root: document.documentElement,
+    log: false,
+    hideAd: false
 });
 ```
 
 * `caseSensitive`：是否檢查 CSS `text-transform` 設定來區分大小寫。
-* `weight`：預設字重。（實際使用字重為 class 設定 > CSS 設定 > 預設設定）
-* `format`：字體格式。部分字型可能僅適用於極致壓縮，可使用 `woff2`、`woff`、`ttf`。
-* `autoApply`：是否自動套用字體。
+* `weight`：預設字重。（實際使用字重為 class 設定 > CSS 設定 > 預設設定）如果沒設定會找最接近 400 的字型。
+* `format`：字體格式。目前都是使用 woff，無法更改。
+* `autoApply`：是否自動套用字體。(幫你寫好 CSS)
 * `cache`：是否記錄載入過的文字，重複呼叫 `emfont.init()` 時不會重新載入。
-* `applyAt`：字體載入時 CSS 插入的位置。如 `document.getElementById()`。
+* `applyAt`：字體載入時 CSS 插入的位置。如 `document.getElementById()`。預設放在 `<head>` 最後面。
+* `colorTest`：開啟時不會真的請求載入字型，只會把顏色改成紅色。適合本地無網路測試時使用。
+* `root`：要從哪裡開始找 class。預設是 `document.documentElement`，也就從整份文件裡找。
+* `log`：是否要透過 `console.log` 顯示載入的字體資訊。
 * `hideMessage`：是否隱藏 emfont 啟動時的提示訊息。
+
+你初始化時進行的設定會被儲存，下次使用 `emfont.init()` 時會自動使用上次的設定。如果要更改直接蓋過去就好了。
 
 ### callback
 

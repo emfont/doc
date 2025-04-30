@@ -23,27 +23,26 @@ import { Callout } from "fumadocs-ui/components/callout";
 
 ```json
 [{
-    "name": "GenJyuuGothicP",
-    "id": "GenJyuuGothicP",
-    "weight": [200,300,350,400,500,700,900],
-    "author": "自家製フォント工房",
-},
+    "id": "Cubic11",
+    "name": "俐方體11號",
+    "weight": [400],
+    "author": "ACh",
+    "name_zh": "俐方體11號",
+    "name_en": "Cubic11",
+    "category": "fantasy",
+    "tags": ["像素"],
+    "family": "M⁺ gothic 12r"
+}
 ...
 ]
 ```
 
-你可以添加參數來過濾字體：
-
--   `name`: 字體名稱
--   `lang`: 支援語言
--   `category`: 字體類別
--   `family`: 字體家族
--   `tag`: 標籤
+你可以添加參數 `q` 來過濾字體：
 
 範例：
 
 ```sh
-curl -v -X GET https://font.emtech.cc/list?name=GenJyuuGothicP
+curl -v -X GET https://font.emtech.cc/list?q=GenJyuuGothicP
 ```
 
 ## 查詢字體詳細資訊
@@ -53,6 +52,10 @@ curl -v -X GET https://font.emtech.cc/list?name=GenJyuuGothicP
 會回傳字體的詳細資訊，包含字體名稱、ID、字體粗細、授權條款、版本、來源網址、作者、描述等。
 
 範例：
+
+```sh
+curl -v -X GET https://font.emtech.cc/info/genjyuu-gothic-p
+```
 
 ```json
 {
