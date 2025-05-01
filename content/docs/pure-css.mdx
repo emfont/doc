@@ -4,15 +4,21 @@ description: 純 CSS 載入字體
 icon: FileJson2
 ---
 
-你可以直接以 CSS 載入整個字體。不過這樣是原始的整個字題直接打包成 woff，可能會耗費較多網路資源與增加等待時間。
+你可以直接以 CSS 載入整個字體。
 
 **GET** `https://font.emtech.cc/css/:font:`
+
+## 完整字體
+
+這樣是原始的整個字題直接打包成 woff，可能會耗費較多網路資源與增加等待時間。
 
 範例：
 
 ```html
 <link href="https://font.emtech.cc/css/:font:" rel="stylesheet">
 ```
+
+## 極致壓縮
 
 你可以透過參數自訂字體粗細以及包含的文字（詳見[極致壓縮](/docs/advanced#極致壓縮)）。
 
@@ -26,11 +32,10 @@ icon: FileJson2
 <link href="https://font.emtech.cc/css/jf-openhuninn-2.0?weight=400&words=神乎其技，原其事理。" rel="stylesheet">
 ```
 
-當然，你也可以使用 `@font-face` 來載入字體。
+## 使用 `@import`
+
+當然，你也可以使用 `@import` 來載入字體。
 
 ```css
-@font-face {
-    font-family: '朱雀仿宋';
-    src: url('https://font.emtech.cc/css/jf-openhuninn-2.0?weight=400&words=神乎其技，原其事理。') format('woff2');
-}
+@import url("https://font.emtech.cc/css/jf-openhuninn-2.0?weight=400&words=神乎其技，原其事理。");
 ```

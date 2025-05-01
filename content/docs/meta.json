@@ -1,20 +1,19 @@
 {
     "title": "emfont 文件",
     "pages": [
-      "---使用教學---",
-      "setup",
-      "advanced",
-      "pure-css",
-      "emoji",
-      "framework",
-      "---開發者---",
-      "api",
-      "how",
-      "---資訊---",
-      "browser-support",
-      "faq",
-      "prefix",
-      "credits"
+        "---使用教學---",
+        "setup",
+        "advanced",
+        "pure-css",
+        "emoji",
+        "framework",
+        "story",
+        "---資訊---",
+        "browser-support",
+        "credits",
+        "---開發者---",
+        "api",
+        "how"
     ],
     "root": true
-  }
+}

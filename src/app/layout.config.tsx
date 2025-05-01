@@ -18,7 +18,7 @@ export const baseOptions: BaseLayoutProps = {
   },
   links: [
     {
-      text: '歡迎來到 emfont',
+      text: '首頁',
       url: '/docs',
       active: 'nested-url',
     }
