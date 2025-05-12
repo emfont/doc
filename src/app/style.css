@@ -71,3 +71,7 @@
     );
     background-repeat: no-repeat;
   } */
+
+.backdrop-blur-md {
+    --webkit-backdrop-filter: var(--tw-backdrop-blur,);
+}

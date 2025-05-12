@@ -60,10 +60,11 @@ emfont 預設會自己去看看你在 CSS 設定的字重，並尋找最接近�
 emfont.init({
     caseSensitive: false, // 目前都是 false
     weight: null,
-    format: "woff2",
+    format: "woff2", // 目前都是使用 woff2
     autoApply: true,
     cache: true,
     applyAt: document.head,
+    forceMin: false,
     colorTest: false,
     root: document.documentElement,
     log: false,
@@ -75,6 +76,7 @@ emfont.init({
 * `weight`：預設字重。（實際使用字重為 class 設定 > CSS 設定 > 預設設定）如果沒設定會找最接近 400 的字型。
 * `format`：字體格式。目前都是使用 woff，無法更改。
 * `autoApply`：是否自動套用字體。(幫你寫好 CSS)
+* `forceMin`：是否強制使用極致壓縮。
 * `cache`：是否記錄載入過的文字，重複呼叫 `emfont.init()` 時不會重新載入。
 * `applyAt`：字體載入時 CSS 插入的位置。如 `document.getElementById()`。預設放在 `<head>` 最後面。
 * `colorTest`：開啟時不會真的請求載入字型，只會把顏色改成紅色。適合本地無網路測試時使用。
