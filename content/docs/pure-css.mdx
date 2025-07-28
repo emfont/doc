@@ -4,6 +4,8 @@ description: 純 CSS 載入字體
 icon: FileJson2
 ---
 
+import { Callout } from "fumadocs-ui/components/callout";
+
 你可以直接以 CSS 載入整個字體。Google Fonts，你懂的。
 
 **GET** `https://font.emtech.cc/css/:font:`
@@ -17,6 +19,11 @@ icon: FileJson2
 ```html
 <link href="https://font.emtech.cc/css/:font:" rel="stylesheet">
 ```
+
+
+<Callout type="info">
+之後會跟 Google Fonts 一樣壓縮並轉檔成 woff2，目前都是提供原始格式。
+</Callout>
 
 ## 選擇文字
 
@@ -47,8 +54,5 @@ icon: FileJson2
 當然，你也可以使用 `@import` 來載入字體。
 
 ```css
-@font-face {
-    font-family: '朱雀仿宋';
-    src: url('https://font.emtech.cc/css/jfOpenHuninn?weight=400&words=神乎其技，原其事理。') format('woff2');
-}
+@import url("https://font.emtech.cc/css/:font?weight=:weight&words=:words");
 ```
