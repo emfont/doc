@@ -41,9 +41,21 @@ icon: FileType
 你可以使用 Js 來用 CSS 隱藏元素，再用 `emfont.init()` 回傳的時候再顯示出來 (像是官網的效果一樣)。
 
 ```js
+// 單一字體的元素
 const el = document.querySelector(".emfont-class");
 el.style.visibility = "hidden";
 emfont.init(el).then(() => {
     el.style.visibility = "visible";
+});
+
+// 全部應用了emfont字體class的元素  *小心使用*
+const els = document.querySelectorAll("[class*='emfont-'");
+els.forEach(el => {
+    el.style.visibility = "hidden";
+});
+emfont.init(el).then(() => {
+    els.forEach(el => {
+        el.style.visibility = "visible";
+    });
 });
 ```
