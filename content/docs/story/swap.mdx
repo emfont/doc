@@ -42,8 +42,8 @@ icon: FileType
 
 ```js
 const el = document.querySelector(".emfont-class");
-el.style.visibility = "none";
+el.style.visibility = "hidden";
 emfont.init(el).then(() => {
-    el.style.display = "visiable";
+    el.style.visibility = "visible";
 });
 ```
