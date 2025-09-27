@@ -10,37 +10,44 @@ import { Callout } from "fumadocs-ui/components/callout";
 
 **GET** `https://font.emtech.cc/css/:font:`
 
-<Callout type="warning">
-如果已經使用 `emfont.js` 理論上你不需要管這個頁面手動引入 CSS！因為 `emfont.js` 會自動幫你載入字體。
-</Callout>
+<Callout type="warning">如果已經使用 `emfont.js` 理論上你不需要管這個頁面手動引入 CSS！因為 `emfont.js` 會自動幫你載入字體。</Callout>
+
+<Callout type="warning">同樣的，你都用 CSS 了要 `emfont.js` 幹嘛？</Callout>
 
 ## 完整字體
 
-目前會提供原始的字體格式，可能會耗費較多網路資源與增加等待時間。近期會完成靜態的子集化，敬請期待。
+<Callout type="warning">此功能目前處於測試階段，可能會有問題。</Callout>
+
+```html
+<link href="https://font.emtech.cc/css/:font:" rel="stylesheet" />
+```
+
+## 指定字重
+
+```html
+<link href="https://font.emtech.cc/css/:font/:weight" rel="stylesheet" />
+```
 
 範例：
 
 ```html
-<link href="https://font.emtech.cc/css/:font:" rel="stylesheet">
+<link href="https://font.emtech.cc/css/jfOpenHuninn/400" rel="stylesheet" />
 ```
 
-
-<Callout type="info">
-之後會跟 Google Fonts 一樣壓縮並轉檔成 woff2，目前都是提供原始格式。
-</Callout>
+<Callout type="info">`/400.css` 或是 `/400` 都可。</Callout>
 
 ## 選擇文字
 
 你可以透過參數自訂字體粗細以及包含的文字。
 
 ```html
-<link href="https://font.emtech.cc/css/:font?weight=:weight&words=:words" rel="stylesheet">
+<link href="https://font.emtech.cc/css/:font?weight=:weight&words=:words" rel="stylesheet" />
 ```
 
 範例：
 
 ```html
-<link href="https://font.emtech.cc/css/jfOpenHuninn?weight=400&words=神乎其技，原其事理。" rel="stylesheet">
+<link href="https://font.emtech.cc/css/jfOpenHuninn?weight=400&words=神乎其技，原其事理。" rel="stylesheet" />
 ```
 
 ### 極致壓縮
@@ -50,7 +57,7 @@ import { Callout } from "fumadocs-ui/components/callout";
 範例：
 
 ```html
-<link href="https://font.emtech.cc/css/jfOpenHuninn?weight=400&words=神乎其技，原其事理。&min=true" rel="stylesheet">
+<link href="https://font.emtech.cc/css/jfOpenHuninn?weight=400&words=神乎其技，原其事理。&min=true" rel="stylesheet" />
 ```
 
 ## 使用 `@import`
