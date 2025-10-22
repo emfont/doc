@@ -1,20 +1,20 @@
 ---
-title: 純 CSS 載入字體
-description: 純 CSS 載入字體
+title: CSS 載入字體
+description: 使用 CSS 載入字體
 icon: FileJson2
 ---
 
 import { Callout } from "fumadocs-ui/components/callout";
 
-你可以直接以 CSS 載入整個字體。Google Fonts，你懂的。
+你可以直接以 CSS 載入整個字體。Google Fonts。你懂的。
 
 **GET** `https://font.emtech.cc/css/:font:`
 
-<Callout type="warning">如果已經使用 `emfont.js` 理論上你不需要管這個頁面手動引入 CSS！因為 `emfont.js` 會自動幫你載入字體。</Callout>
-
-<Callout type="warning">同樣的，你都用 CSS 了要 `emfont.js` 幹嘛？</Callout>
+<Callout type="info">如果已經使用 `emfont.js` 理論上你不需要管這個頁面手動引入 CSS！因為 `emfont.js` 會自動幫你載入字體。同樣的，你都用 CSS 了要 `emfont.js` 幹嘛？</Callout>
 
 ## 完整字體
+
+沒有指定字重會載入全部的。不過瀏覽器很聰明，只會載入有用到的。
 
 ```html
 <link href="https://font.emtech.cc/css/:font:" rel="stylesheet" />
@@ -50,7 +50,7 @@ import { Callout } from "fumadocs-ui/components/callout";
 
 ### 極致壓縮
 
-為你專屬切一份字體，詳見[極致壓縮](/docs/advanced#極致壓縮)。只需在後面加入參數 `?min=true`。
+為你專屬切一份字體，詳見[極致壓縮](/docs/advanced#極致壓縮)。只需在後面加入參數 `?min=true`。適合用在 Logo 字體等會大量重複使用但用到的字很少的。
 
 範例：
 
