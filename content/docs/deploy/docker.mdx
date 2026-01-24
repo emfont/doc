@@ -1,0 +1,29 @@
+---
+title: docker
+description: docker 部屬 emfont 服務
+icon: container
+---
+## build Docker image
+在本地製作新的 image 執行 emfont node.js 。
+```bash
+docker build -t emfont:v0 .
+docker run -d --name emfont --env-file .env emfont:v0
+```
+
+## Run docker image
+```
+docker run --env-file .env -p 1370:3000
+  
+```
+## Docker compose
+
+使用根目錄底下的 docker-compose.yml 一次把周邊服務都架起來。
+
+
+
+## Docker file
+## see log
+
+```
+docker exec -it my-app-service /bin/bash
+```
