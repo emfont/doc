@@ -1,0 +1,20 @@
+---
+title: 在自己的機器上跑 emfont 
+description: 架設自己的 emfont 實例，用於開發或實際提供服務
+icon: blocks
+---
+
+import { Callout } from "fumadocs-ui/components/callout";
+
+<Callout type="info">
+相關功能開發中，內容僅供參考。
+</Callout>
+emfont 使用 docker 打包程式，讓專案可以更容易在不同的環境中順利執行。如果你是貢獻者，
+你會需要在本地修改原始碼測試執行，請參考下一節的 docker 篇；如果你想在伺服器長時間運作提供服務，
+你依然可以使用 docker 提供服務，但我們強烈推薦使用 zeabur 來部署，可以省去一些繁瑣的更換 image 操作和享受即時的狀態更新，至少我們是這樣做。
+# 環境變數
+對於本地開發者，直接複製 `.env.example` 命名為 .env ，
+
+|變數名稱|功能|
+|:---|:---|
+|||
