@@ -170,6 +170,28 @@ pnpm start
 
 > 如果你發現他在亂引入 emfont 的話你可以請他「去閱讀文檔」。
 
+## 在 Zed 中使用 emfont MCP
+
+1. 點擊右下角「Agent Panel」圖標打開 AI 助理側邊欄。
+2. 點開右上角三個點 → MCP Servers → Add a MCP Server。
+3. 在彈出的對話框左下角點擊「Configure Remote」，改為新增遠端 MCP 伺服器。
+4. 修改設定
+    ```json
+    {
+      /// 這裡修改為你喜歡的名字，例如 emfont-mcp-server
+      "emfont-mcp-server": {
+        /// 這裡填入 emfont MCP 遠端網址
+        "url": "https://font.emtech.cc/mcp",
+        /// 這裡可以設定 HTTPs 請求標頭，可留空
+        "headers": {}
+      }
+    }
+    ```
+5. 在 AI 助理側邊欄輸入框下方，選擇「Write」。
+6. 在提示詞中告訴 AI 使用「emfont-mcp」，例如：
+
+   請使用 emfont-mcp 上推薦手寫體讓我放在網站上 ![請使用 emfont-mcp 上推薦手寫體讓我放在網站上](/docs/mcp/zed-usage.webp)
+
 ## License
 
 此專案採用 Apache 2.0 授權，詳情請見 [LICENSE](https://github.com/emfont/emfont/blob/main/LICENSE) 檔案。
